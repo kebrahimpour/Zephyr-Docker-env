@@ -12,14 +12,14 @@ We have 2 images:
 This docker image can be built with
 
 ```
-docker build -f Dockerfile.user --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t zephyr-build:v<tag> .
+docker build -f Dockerfile  -t zephyr-build .
 ```
 
 and can be used for development and building zephyr samples and tests,
 for example:
 
 ```
-docker run -ti -v <path to zephyr workspace>:/workdir zephyr-build:v<tag>
+docker run -ti -v  <path to zephyr workspace>:/workdir zephyr-build 
 ```
 
 Then, follow the steps below to build a sample application:
@@ -67,15 +67,3 @@ cd build
 cmake -DBOARD=native_posix -GNinja ..
 ninja run
 ```
-
-The result can be observed by connecting a VNC client to _localhost_ at port
-_5900_, the default VNC password is _zephyr_.
-
-For example on a Ubuntu host system:
-
-```
-vncviewer localhost:5900
-```
-
-
-
