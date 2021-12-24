@@ -93,7 +93,7 @@ RUN dpkg --add-architecture i386 && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN locale-gen de_DE.utf8
-update-locale LANG=de_DE.UTF-8
+RUN update-locale LANG=de_DE.UTF-8
 ENV LANG de_DE.UTF-8
 ENV LANGUAGE de_DE:de
 
