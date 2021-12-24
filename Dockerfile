@@ -92,10 +92,10 @@ RUN dpkg --add-architecture i386 && \
 	rm renode_${RENODE_VERSION}_amd64.deb && \
 	rm -rf /var/lib/apt/lists/*
 
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+RUN locale-gen de_DE.utf8
+update-locale LANG=de_DE.UTF-8
+ENV LANG de_DE.UTF-8
+ENV LANGUAGE de_DE:de
 
 RUN pip3 install wheel pip -U &&\
 	pip3 install -r https://raw.githubusercontent.com/zephyrproject-rtos/zephyr/master/scripts/requirements.txt && \
