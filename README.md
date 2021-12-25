@@ -19,7 +19,7 @@ and can be used for development and building zephyr samples and tests,
 for example:
 
 ```
-docker run -ti -v  <path to zephyr workspace>:/workdir zephyr-build 
+docker run -ti -v ~/.ssh:/root/.ssh:ro -v <folder ...>/zephyr-ws:/workdir zephyr-build
 ```
 
 Then, follow the steps below to build a sample application:

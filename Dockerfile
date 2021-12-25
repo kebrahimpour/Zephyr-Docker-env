@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
 
+ARG ssh_prv_key
+ARG ssh_pub_key
 ARG ZSDK_VERSION=0.13.2
 ARG GCC_ARM_NAME=gcc-arm-none-eabi-10-2020-q4-major
 ARG CMAKE_VERSION=3.20.5
